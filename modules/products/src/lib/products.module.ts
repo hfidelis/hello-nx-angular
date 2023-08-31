@@ -4,12 +4,15 @@ import { RouterModule } from '@angular/router';
 import { productsRoutes } from './lib.routes';
 import { ProductListComponent } from './product-list/product-list.component';
 import { UiComponent } from 'modules/shared/ui';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(productsRoutes),
-    UiComponent],
+    UiComponent,
+    ReactiveFormsModule,
+    FormsModule
+  ],
   declarations: [ProductListComponent],
 })
 export class ProductsModule {}
